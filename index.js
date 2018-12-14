@@ -9,10 +9,10 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
 app.get('/', function(request, response){
-    response.render('./angry_birds/index.html');
+    response.render('./index.html');
 })
 
-app.use('/angry_birds', angryBirdsController);
+app.use('/angryBirds', angryBirdsController);
 
 app.listen(port, function(){
     console.log(`App is listening on port ${port}`);

@@ -6,10 +6,10 @@ router.get('/', function(request, response){
     var mustacheVariables = {
         angryBirdsList: angryBirds.birds
     }
-    response.render('./angry_birds/index');
+    response.render('./angry_birds/index', mustacheVariables);
 });
 
-router.get('/:id', function(){
+router.get('/:id', function(request, response){
     var angryBirdsId = request.params.id;
     var angrybirds = angryBirds.birds[angryBirdsId];
     var angryBirdsVariables = {
